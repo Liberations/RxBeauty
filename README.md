@@ -1,5 +1,5 @@
 # RxBeauty
-##基于mvp rxjava retrofit2 搭建的框架，学习参考之用，一个可以看美女的APP
+基于mvp rxjava retrofit2 搭建的框架，学习参考之用，一个可以看美女的APP
  
  
 # 下载
