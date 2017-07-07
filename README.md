@@ -3,7 +3,7 @@
  
  
 # 下载
-![下载](https://github.com/Liberations/RxBeauty/raw/master/apk/RxBeauty.apk)
+https://github.com/Liberations/RxBeauty/raw/master/apk/RxBeauty.apk
 
 # 图片欣赏
 ![首页](https://github.com/Liberations/RxBeauty/blob/master/pic/1.png)
