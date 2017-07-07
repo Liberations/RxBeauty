@@ -1,0 +1,45 @@
+package com.rxbeauty.presenter;
+
+import com.rxbeauty.ui.view.MvpView;
+
+/**
+ * description ：
+ * project name：RxBeauty
+ * author : Liberation
+ * creation date: 2017/7/7 10:06
+ *
+ * @version 1.0
+ */
+public class BasePresenter<T extends MvpView> implements Presenter<T> {
+
+	private T mMvpView;
+
+	@Override
+	public void attachView(T mvpView) {
+		mMvpView = mvpView;
+	}
+
+	@Override
+	public void detachView() {
+		mMvpView = null;
+	}
+
+	public boolean isViewAttached() {
+		return mMvpView != null;
+	}
+
+	public T getMvpView() {
+		return mMvpView;
+	}
+
+	public void checkViewAttached() {
+		if (!isViewAttached()) throw new MvpViewNotAttachedException();
+	}
+
+	public static class MvpViewNotAttachedException extends RuntimeException {
+		public MvpViewNotAttachedException() {
+			super("Please call Presenter.attachView(MvpView) before" +
+					" requesting data to the Presenter");
+		}
+	}
+}
